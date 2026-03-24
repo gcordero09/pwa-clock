@@ -45,7 +45,7 @@ if ('serviceWorker' in navigator) {
     // Escuchar al evento 'load' de la ventana para asegurar que otros recursos vitales ya hayan cargado
     window.addEventListener('load', () => {
         // Registrar el ServiceWorker que se encuentra en la raíz
-        navigator.serviceWorker.register('/sw.js')
+        navigator.serviceWorker.register('./src/sw.js')
             .then(registration => {
                 console.log('ServiceWorker registrado con éxito con el scope:', registration.scope);
             })

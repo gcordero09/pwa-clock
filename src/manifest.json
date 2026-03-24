@@ -2,20 +2,20 @@
   "name": "PWA Reloj Digital",
   "short_name": "Reloj PWA",
   "description": "Una aplicación web progresiva que muestra la hora del sistema y se actualiza cada segundo.",
-  "start_url": "/",
+  "start_url": "../",
   "display": "standalone",
   "background_color": "#1a1a2e",
   "theme_color": "#e94560",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/icon-192.svg",
+      "src": "./icon-192.svg",
       "type": "image/svg+xml",
       "sizes": "192x192",
       "purpose": "any maskable"
     },
     {
-      "src": "/icon-512.svg",
+      "src": "./icon-512.svg",
       "type": "image/svg+xml",
       "sizes": "512x512",
       "purpose": "any maskable"

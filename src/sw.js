@@ -8,13 +8,13 @@ const CACHE_NAME = 'pwa-clock-v1';
 
 // Recursos críticos de la UI a almacenar permanentemente en caché (Asset Caching)
 const URLS_TO_CACHE = [
-    '/',
-    '/index.html',
-    '/style.css',
-    '/app.js',
-    '/manifest.json',
-    '/icon-192.svg',
-    '/icon-512.svg'
+    '../',
+    '../index.html',
+    './style.css',
+    './app.js',
+    './manifest.json',
+    './icon-192.svg',
+    './icon-512.svg'
 ];
 
 /**
