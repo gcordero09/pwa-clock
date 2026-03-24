@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA Reloj Digital</title>
+    <meta name="description" content="Una aplicación web progresiva que muestra la hora actual del sistema.">
+
+    <!-- Archivo de manifiesto para la PWA -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Configuración para dispositivos móviles (color del tema del navegador) -->
+    <meta name="theme-color" content="#1a1a2e">
+
+    <!-- Icono de la aplicación -->
+    <link rel="icon" type="image/svg+xml" href="/icon-192.svg">
+
+    <!-- Archivo de estilos -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <main class="clock-container">
+        <h1 class="title">Hora Actual</h1>
+        <div class="time-display" id="time-display">
+            <!-- La hora se inyectará aquí a través de JavaScript -->
+            <span class="placeholder">Cargando...</span>
+        </div>
+        <div class="date-display" id="date-display">
+            <!-- La fecha se inyectará aquí a través de JavaScript -->
+        </div>
+    </main>
+
+    <!-- Script de la aplicación (lógica e inicialización del Service Worker) -->
+    <script src="/app.js"></script>
+</body>
+
+</html>

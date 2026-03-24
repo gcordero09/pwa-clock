@@ -1,0 +1,107 @@
+/* Importar fuente moderna de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@700&display=swap');
+
+:root {
+    /* Paleta de colores principal */
+    --bg-color-start: #1a1a2e;
+    --bg-color-end: #16213e;
+    --text-color: #ffffff;
+    --accent-color: #e94560;
+    
+    /* Configuración de estilos "Glassmorphism" */
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, var(--bg-color-start), var(--bg-color-end));
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.clock-container {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 3rem 4rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.clock-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45);
+}
+
+.title {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+    opacity: 0.9;
+}
+
+.time-display {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: 1;
+    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.time-display .colon {
+    /* Animación para que los dos puntos parpadeen cada segundo */
+    animation: blink 1s infinite;
+}
+
+.date-display {
+    font-size: 1.1rem;
+    font-weight: 400;
+    opacity: 0.7;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+}
+
+/* Ajustes responsivos para pantallas más pequeñas / dispositivos móviles */
+@media (max-width: 600px) {
+    .clock-container {
+        padding: 2.5rem 2rem;
+        width: 85%;
+        max-width: 320px;
+    }
+    .time-display {
+        font-size: 3.5rem;
+    }
+    .title {
+        font-size: 1rem;
+    }
+}
